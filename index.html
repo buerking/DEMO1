@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!--====== Required meta tags ======-->
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!--====== Title ======-->
+  <title>Home | Ayro UI</title>
+
+  <!--====== Favicon Icon ======-->
+  <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg" />
+
+  <!--====== Bootstrap css ======-->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+  <!--====== Line Icons css ======-->
+  <link rel="stylesheet" href="assets/css/lineicons.css" />
+
+  <!--====== Style css ======-->
+  <link rel="stylesheet" href="assets/scss/starter.css" />
+
+  <!--====== nav css ======-->
+  <link rel="stylesheet" href="assets/scss/navbars/navbar-02.css" />
+
+  <!--====== Slider css ======-->
+  <link rel="stylesheet" href="assets/scss/sliders/slider-02.css" />
+  <style>
+    /*.container-fluid {*/
+    /*  display: flex;*/
+    /*}*/
+    .fixed-sidebar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      height: 100vh;
+      background-color: #fff;
+    }
+    .logo {
+      text-align: right;
+      margin-right: -30px;
+    }
+    .navigation ul {
+      text-align: right;
+      margin-right: 10px;
+      list-style-type: none;
+    }
+    .navigation a {
+      font-size: 12px;
+      font-family: Arial, sans-serif;
+      color: #999999;
+      text-decoration: none;
+    }
+    .col-md-10 {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <!--====== PART START ======-->
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-md-2 fixed-sidebar">
+        <div class="logo">
+          <img src="logo.jpg" alt="Logo" width="150" height="150">
+        </div>
+        <div class="navigation text-right">
+          <ul>
+            <li><a href="#">SPACE</a></li>
+            <li><a href="#">FURNITURE</a></li>
+            <li><a href="#">BRANDING</a></li>
+            <li><a href="#">PRESS</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-10 offset-2">
+        <p class="lni-text-align-left">111</p>
+      </div>
+      <!-- end -->
+    </div>
+  </div>
+  <!--====== PART ENDS ======-->
+
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    //===== close navbar-collapse when a  clicked
+    let navbarTogglerFive = document.querySelector(
+            ".navbar-five .navbar-toggler"
+    );
+    navbarTogglerFive.addEventListener("click", function () {
+      navbarTogglerFive.classList.toggle("active");
+    });
+  </script>
+</body>
+
+</html>
