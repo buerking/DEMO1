@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="assets/scss/services/service-01.css" />
     <link rel="stylesheet" href="assets/scss/teams/team-01.css" />
     <link rel="stylesheet" href="assets/scss/section-title/section-title-07.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
     <style>
         .hide {
             display: none;
@@ -259,6 +261,17 @@
                     <a class="video-popup glightbox" href="https://www.youtube.com/watch?v=NJbXptdalP0">
                         <i class="lni lni-play"></i>
                     </a>
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="video-content text-center">
+                    <div id="panorama"></div>
+                    <script>
+                        pannellum.viewer('panorama', {
+                            "type": "equirectangular",
+                            "panorama": "https://pannellum.org/images/alma.jpg"
+                        });
+                    </script>
                 </div>
             </div>
         </div>
