@@ -14,12 +14,40 @@
     </style>
 </head>
 <body>
-
 <div id="panorama"></div>
 <script>
     pannellum.viewer('panorama', {
         "type": "equirectangular",
-        "panorama": "https://pannellum.org/images/alma.jpg"
+        "panorama": "https://pannellum.org/images/alma.jpg",
+        "autoLoad": false, // 是否自动加载全景图
+        "showControls": true, // 是否显示控制面板
+        "yaw": 180, // 摄像机的水平方向偏转角度
+        "pitch": 0, // 摄像机的垂直方向偏转角度
+        "hfov": 100, // 水平视野角度
+        "minHfov": 50, // 最小水平视野角度
+        "maxHfov": 120, // 最大水平视野角度
+        "minPitch": -90, // 最小垂直偏转角度
+        "maxPitch": 90, // 最大垂直偏转角度
+        "mouseZoom": true, // 是否允许鼠标缩放
+        "keyboardZoom": true, // 是否允许键盘缩放
+        "autoRotate": -2, // 自动旋转速度
+        "autoRotateInactivityDelay": 3000, // 自动旋转时的等待时间
+        "hotSpots": [ // 热点数组
+            {
+                "pitch": 0, // 热点的垂直偏转角度
+                "yaw": 90, // 热点的水平偏转角度
+                "type": "info", // 热点类型
+                "text": "This is an information hotspot", // 热点的文本描述
+                "URL": "path/to/info/page.html" // 热点相关链接
+            },
+            {
+                "pitch": 0,
+                "yaw": -90,
+                "type": "image",
+                "text": "This is an image hotspot",
+                "URL": "path/to/image.jpg"
+            }
+        ]
     });
 </script>
 
