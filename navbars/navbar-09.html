@@ -43,7 +43,6 @@
               <a class="navbar-brand" href="javascript:void(0)">
                 <img src="../assets/images/white-logo.svg" alt="Logo" />
               </a>
-
               <button
                 class="navbar-toggler"
                 type="button"
@@ -119,13 +118,30 @@
                   <li class="nav-item">
                     <a href="javascript:void(0)">Contact</a>
                   </li>
+
+                  <li class="nav-item dropdown">
+                    <a
+                            class="nav-link dropdown-toggle"
+                            href="javascript:void(0)"
+                            id="languageDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                    >LANGUAGE</a>
+                    <ul class="sub-menu collapse" aria-labelledby="languageDropdown">
+                      <!-- Add language options here -->
+                      <li><a class="dropdown-item" href="#">English</a></li>
+                      <li><a class="dropdown-item" href="#">Spanish</a></li>
+                      <!-- Add more language options if needed -->
+                    </ul>
+                  </li>
                 </ul>
               </div>
 
               <div class="navbar-btn d-none d-lg-inline-block">
-                <a class="menu-bar" href="#side-menu-left"
-                  ><i class="lni lni-menu"></i
-                ></a>
+                <a class="menu-bar" href="#side-menu-left">
+                  <i class="lni lni-menu"></i>
+                </a>
               </div>
             </nav>
             <!-- navbar -->
@@ -147,7 +163,7 @@
       <div class="sidebar-content">
         <div class="sidebar-logo">
           <a href="javascript:void(0)"
-            ><img src="../assets/images/logo.svg" alt="Logo"
+            ><img src="../assets/images/logo.svg" style="width: 80px" alt="Logo"
           /></a>
         </div>
         <p class="text">
@@ -196,6 +212,7 @@
 
     <!--====== SIDEBAR PART ENDS ======-->
 
+
     <!--====== Bootstrap js ======-->
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
 
@@ -228,6 +245,23 @@
       sideMenuLeftNine.addEventListener("click", function () {
         sidebarLeft.classList.add("open");
         overlayLeft.classList.add("open");
+      });
+    </script>
+
+    <!--====== Bootstrap js ======-->
+    <script>
+      // Toggle dropdown menu
+      let languageDropdown = document.querySelector(".nav-item.dropdown");
+      languageDropdown.addEventListener("click", function (event) {
+        event.stopPropagation();
+        this.classList.toggle("show");
+      });
+
+      // Close dropdown when clicking outside
+      document.addEventListener("click", function (event) {
+        if (!languageDropdown.contains(event.target)) {
+          languageDropdown.classList.remove("show");
+        }
       });
     </script>
   </body>

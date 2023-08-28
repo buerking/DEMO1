@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--====== Required meta tags ======-->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!--====== Title ======-->
+    <title>Home | PRIOR DESIGN</title>
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/svg" />
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!--====== Line Icons css ======-->
+    <link rel="stylesheet" href="assets/css/lineicons.css" />
+    <!--====== Style css ======-->
+    <link rel="stylesheet" href="assets/scss/starter.css" />
+    <!--====== nav css ======-->
+    <link rel="stylesheet" href="assets/scss/navbars/navbar-02.css" />
+    <link rel="stylesheet" href="assets/scss/footers/footer-02.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/nouislider/distribute/nouislider.min.css">
+    <link rel="stylesheet" href="assets/scss/portfolios/portfolio-02.css" />
+    <style>
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .swiper {
+            width: 100%;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .swiper-slide {
+            background-size: cover;
+            background-position: center;
+        }
+        .mySwiper2 {
+            height: 80%;
+            width: 100%;
+        }
+        .mySwiper {
+            height: 8%;
+            box-sizing: border-box;
+            padding: 10px 0;
+            /*display: flex; !* *!*/
+            flex: 0.3; /* 控制缩略图所占宽度，根据需要进行调整 */
+            max-height: 50%; /* 限制缩略图的最大高度 */
+            overflow-y: auto; /* 若缩略图过多，添加滚动条 */
+            /*flex-direction: column; !* 垂直排列 *!*/
+        }
+        .mySwiper .swiper-slide {
+            width: 25%;
+            height: 100%;
+            opacity: 0.4;
+        }
+        .mySwiper .swiper-slide-thumb-active {
+            opacity: 1;
+        }
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+<section class="navbar-area navbar-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg fixed-top">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="assets/images/logo.svg" width="60px" alt="Logo" />
+                    </a>
+                    <button
+                            class="navbar-toggler"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#navbarTwo"
+                            aria-controls="navbarTwo"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                    >
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarTwo">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a href="home.html">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a
+                                        class="page-scroll active"
+                                        data-bs-toggle="collapse"
+                                        data-bs-target="#sub-nav3"
+                                        aria-controls="sub-nav3"
+                                        aria-expanded="false"
+                                        aria-label="Toggle navigation"
+                                        href="javascript:void(0)"
+                                >ABOUT
+                                    <div class="sub-nav-toggler">
+                                        <span><i class="lni lni-chevron-down"></i></span>
+                                    </div>
+                                </a>
+
+                                <ul class="sub-menu collapse" id="sub-nav3">
+                                    <li><a href="javascript:void(0)">DEMO Menu 1</a></li>
+                                    <li>
+                                        <a
+                                                class="page-scroll"
+                                                data-bs-toggle="collapse"
+                                                data-bs-target="#sub-nav4"
+                                                aria-controls="sub-nav4"
+                                                aria-expanded="false"
+                                                aria-label="Toggle navigation"
+                                                href="javascript:void(0)"
+                                        >DEMO Menu 2
+                                            <div class="sub-nav-toggler">
+                                                <span><i class="lni lni-chevron-down"></i></span>
+                                            </div>
+                                        </a>
+                                        <ul class="sub-menu collapse" id="sub-nav4">
+                                            <li><a href="javascript:void(0)">DEMO CHILD menu 1</a></li>
+                                            <li><a href="javascript:void(0)">DEMO CHILD 2</a></li>
+                                            <li><a href="javascript:void(0)">DEMO CHILD 3</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:void(0)">DEMO Menu 3</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="space.html">SPACE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="blog.html">BLOG</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="javascript:void(0)">DESIGN WORK</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="navbar-btn d-none d-sm-inline-block">
+                        <ul>
+                            <li>
+                                <a class="btn primary-btn square" href="sign-in-up/sign-in-up-01.html">
+                                    Sign In
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                        class="btn primary-btn-outline square"
+                                        href="sign-in-up/sign-in-up-01.html"
+                                >
+                                    Sign Up
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navbar -->
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+</section>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div style="margin-top: 15px; --swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="lightimage/1.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_3.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_4.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_5.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_6.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_7.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_8.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_9.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="lightimage/1_10.jpg" />
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="lightimage/1.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_2.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_3.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_4.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_5.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_6.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_7.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_8.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_9.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="lightimage/1_10.jpg" />
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div class="col-md-6">
+            <h2 style="margin-top: 15px; margin-bottom: 15px;">Backpack Men and women laptop bag fashion trend travel backpack</h2>
+
+            <div class="price-wrap d-flex align-items-end">
+                <div class="new-price fs-1 lh-1 fw-bold me-2">$299.00</div>
+                <div class="old-price text-muted text-decoration-line-through">$312,312.00</div>
+            </div>
+
+            <div class="stock-and-sku mb-4">
+                <div class="d-flex">
+                    <span class="title text-muted">Quantity:</span>
+                    <div class="text-success">In Stock</div>
+                </div>
+                <div class="d-flex">
+                    <span class="title text-muted">Brand:</span>
+                    <a href="http://abc.gaoliping.cn/brands/4">RayBan</a>
+                </div>
+                <div class="d-flex">
+                    <span class="title text-muted">SKU:</span>
+                    dfufuuivvvvb
+                </div>
+                <div class="d-flex">
+                    <span class="title text-muted">Model:</span>
+                    dpfiv-fdsf
+                </div>
+            </div>
+
+            <div class="variables-wrap mb-4">
+                <div class="variable-group mb-2">
+                    <p class="mb-2">Size</p>
+                    <div class="variable-info">
+                        <div class="selected">S</div>
+                        <div class="">M</div>
+                        <div class="">L</div>
+                        <div class="disabled">XL</div>
+                    </div>
+                </div>
+                <div class="variable-group mb-2">
+                    <p class="mb-2">Color</p>
+                    <div class="variable-info">
+                        <div class="selected">Green</div>
+                        <div class="">White</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="quantity-btns">
+                <div class="quantity-wrap">
+                    <input type="text" onkeyup="this.value=this.value.replace(/\D/g,&#39;&#39;)" name="quantity" class="form-control">
+                    <div class="right">
+                        <i class="bi bi-chevron-up"></i>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+                <button product-id="305" product-price="299" class="btn btn-outline-dark ms-md-3 add-cart fw-bold">
+                    <i class="bi bi-cart-fill me-1"></i>Add To Cart</button>
+                <button product-id="305" product-price="299" class="btn btn-dark ms-3 fw-bold">
+                    <i class="bi bi-bag-fill me-1"></i>Buy Now</button>
+            </div>
+
+            <div class="add-wishlist">
+                <button data-in-wishlist="0" onclick="bk.addWishlist(&#39;3&#39;, this)" class="btn btn-link ps-0 text-secondary">
+                    <i class="bi bi-heart me-1"></i> Add To Favorites</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<section class="portfolio-area portfolio-two">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="portfolio-menu text-center">
+                    <button data-filter="detail" class="active">Detail</button>
+                    <button data-filter="info">Info</button>
+                    <button data-filter="planning">Commit</button>
+                </div>
+                <!-- portfolio menu -->
+            </div>
+        </div>
+        <!-- row -->
+        <div class="row grid">
+            <div class="col-lg-12 col-sm-6" data-filter="detail">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img src="assets/images/portfolio/portfolio-2/pf1.jpg" alt="image"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-sm-6" data-filter="info">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img
+                                src="assets/images/portfolio/portfolio-2/pf2.jpg"
+                                alt="image"
+                        />
+                    </div>
+                    <div class="portfolio-overlay d-flex align-items-center">
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <a
+                                        class="image-popup glightbox2"
+                                        href="assets/images/portfolio/portfolio-2/pf2.jpg"
+                                >
+                                    <i class="lni lni-zoom-in"></i>
+                                </a>
+                            </div>
+                            <div class="portfolio-icon">
+                                <a href="javascript:void(0)"
+                                ><i class="lni lni-link"></i
+                                ></a>
+                            </div>
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">
+                                    <a href="javascript:void(0)">Graphics Design</a>
+                                </h4>
+                                <p class="text">
+                                    Short description for the ones who look for something new.
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single portfolio -->
+            </div>
+            <div class="col-lg-12 col-sm-6" data-filter="branding">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img
+                                src="assets/images/portfolio/portfolio-2/pf3.jpg"
+                                alt="image"
+                        />
+                    </div>
+                    <div class="portfolio-overlay d-flex align-items-center">
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <a
+                                        class="image-popup glightbox2"
+                                        href="assets/images/portfolio/portfolio-2/pf3.jpg"
+                                >
+                                    <i class="lni lni-zoom-in"></i>
+                                </a>
+                            </div>
+                            <div class="portfolio-icon">
+                                <a href="javascript:void(0)"
+                                ><i class="lni lni-link"></i
+                                ></a>
+                            </div>
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">
+                                    <a href="javascript:void(0)">Graphics Design</a>
+                                </h4>
+                                <p class="text">
+                                    Short description for the ones who look for something new.
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single portfolio -->
+            </div>
+            <div class="col-lg-12 col-sm-6" data-filter="marketing">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img
+                                src="assets/images/portfolio/portfolio-2/pf4.jpg"
+                                alt="image"
+                        />
+                    </div>
+                    <div class="portfolio-overlay d-flex align-items-center">
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <a
+                                        class="image-popup glightbox2"
+                                        href="assets/images/portfolio/portfolio-2/pf4.jpg"
+                                >
+                                    <i class="lni lni-zoom-in"></i>
+                                </a>
+                            </div>
+                            <div class="portfolio-icon">
+                                <a href="javascript:void(0)"
+                                ><i class="lni lni-link"></i
+                                ></a>
+                            </div>
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">
+                                    <a href="javascript:void(0)">Graphics Design</a>
+                                </h4>
+                                <p class="text">
+                                    Short description for the ones who look for something new.
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single portfolio -->
+            </div>
+            <div class="col-lg-12 col-sm-6" data-filter="research">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img
+                                src="assets/images/portfolio/portfolio-2/pf5.jpg"
+                                alt="image"
+                        />
+                    </div>
+                    <div class="portfolio-overlay d-flex align-items-center">
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <a
+                                        class="image-popup glightbox2"
+                                        href="assets/images/portfolio/portfolio-2/pf5.jpg"
+                                >
+                                    <i class="lni lni-zoom-in"></i>
+                                </a>
+                            </div>
+                            <div class="portfolio-icon">
+                                <a href="javascript:void(0)"
+                                ><i class="lni lni-link"></i
+                                ></a>
+                            </div>
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">
+                                    <a href="javascript:void(0)">Graphics Design</a>
+                                </h4>
+                                <p class="text">
+                                    Short description for the ones who look for something new.
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single portfolio -->
+            </div>
+            <div class="col-lg-12 col-sm-6" data-filter="planning">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img
+                                src="assets/images/portfolio/portfolio-2/pf6.jpg"
+                                alt="image"
+                        />
+                    </div>
+                    <div class="portfolio-overlay d-flex align-items-center">
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <a
+                                        class="image-popup glightbox2"
+                                        href="assets/images/portfolio/portfolio-2/pf6.jpg"
+                                >
+                                    <i class="lni lni-zoom-in"></i>
+                                </a>
+                            </div>
+                            <div class="portfolio-icon">
+                                <a href="javascript:void(0)"
+                                ><i class="lni lni-link"></i
+                                ></a>
+                            </div>
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">
+                                    <a href="javascript:void(0)">Graphics Design</a>
+                                </h4>
+                                <p class="text">
+                                    Short description for the ones who look for something new.
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single portfolio -->
+            </div>
+            <div class="col-lg-12 col-sm-6" data-filter="research">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img
+                                src="assets/images/portfolio/portfolio-2/pf7.jpg"
+                                alt="image"
+                        />
+                    </div>
+                    <div class="portfolio-overlay d-flex align-items-center">
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <a
+                                        class="image-popup glightbox2"
+                                        href="assets/images/portfolio/portfolio-2/pf7.jpg"
+                                >
+                                    <i class="lni lni-zoom-in"></i>
+                                </a>
+                            </div>
+                            <div class="portfolio-icon">
+                                <a href="javascript:void(0)"
+                                ><i class="lni lni-link"></i
+                                ></a>
+                            </div>
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">
+                                    <a href="javascript:void(0)">Graphics Design</a>
+                                </h4>
+                                <p class="text">
+                                    Short description for the ones who look for something new.
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single portfolio -->
+            </div>
+            <div class="col-lg-12 col-sm-6" data-filter="marketing">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img
+                                src="assets/images/portfolio/portfolio-2/pf8.jpg"
+                                alt="image"
+                        />
+                    </div>
+                    <div class="portfolio-overlay d-flex align-items-center">
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <a
+                                        class="image-popup glightbox2"
+                                        href="assets/images/portfolio/portfolio-2/pf8.jpg"
+                                >
+                                    <i class="lni lni-zoom-in"></i>
+                                </a>
+                            </div>
+                            <div class="portfolio-icon">
+                                <a href="javascript:void(0)"
+                                ><i class="lni lni-link"></i
+                                ></a>
+                            </div>
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">
+                                    <a href="javascript:void(0)">Graphics Design</a>
+                                </h4>
+                                <p class="text">
+                                    Short description for the ones who look for something new.
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single portfolio -->
+            </div>
+            <div class="col-lg-12 col-sm-6" data-filter="planning">
+                <div class="portfolio-style-two text-center">
+                    <div class="portfolio-image">
+                        <img
+                                src="assets/images/portfolio/portfolio-2/pf9.jpg"
+                                alt="image"
+                        />
+                    </div>
+                    <div class="portfolio-overlay d-flex align-items-center">
+                        <div class="portfolio-content">
+                            <div class="portfolio-icon">
+                                <a
+                                        class="image-popup glightbox2"
+                                        href="assets/images/portfolio/portfolio-2/pf9.jpg"
+                                >
+                                    <i class="lni lni-zoom-in"></i>
+                                </a>
+                            </div>
+                            <div class="portfolio-icon">
+                                <a href="javascript:void(0)"
+                                ><i class="lni lni-link"></i
+                                ></a>
+                            </div>
+                            <div class="portfolio-text">
+                                <h4 class="portfolio-title">
+                                    <a href="javascript:void(0)">Graphics Design</a>
+                                </h4>
+                                <p class="text">
+                                    Short description for the ones who look for something new.
+                                    Awesome!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- single portfolio -->
+            </div>
+        </div>
+        <!-- row -->
+    </div>
+    <!-- container -->
+</section>
+
+<footer class="footer-area footer-two">
+    <div class="footer-widget">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-4 col-sm-12">
+                    <div class="f-about">
+                        <div class="footer-logo">
+                            <a href="javascript:void(0)">
+                                <img src="assets/images/footer/logo.svg" width="80px" alt="Logo" />
+                            </a>
+                        </div>
+                        <p class="text">
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.
+                        </p>
+                        <ul class="social">
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="lni lni-facebook-filled"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="lni lni-twitter-original"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="lni lni-instagram-filled"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <i class="lni lni-linkedin-original"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-sm-4">
+                    <div class="footer-link">
+                        <h6 class="footer-title">Company</h6>
+                        <ul>
+                            <li><a href="javascript:void(0)">About</a></li>
+                            <li><a href="javascript:void(0)">Contact</a></li>
+                            <li><a href="javascript:void(0)">Marketing</a></li>
+                        </ul>
+                    </div>
+                    <!-- footer link -->
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-4">
+                    <div class="footer-link">
+                        <h6 class="footer-title">Services</h6>
+                        <ul>
+                            <li><a href="javascript:void(0)">Products</a></li>
+                            <li><a href="javascript:void(0)">Business</a></li>
+                            <li><a href="javascript:void(0)">Developer</a></li>
+                        </ul>
+                    </div>
+                    <!-- footer link -->
+                </div>
+                <div class="col-xl-2 col-lg-3 col-sm-4">
+                    <div class="footer-link">
+                        <h6 class="footer-title">Help & Suuport</h6>
+                        <ul>
+                            <li><a href="javascript:void(0)">Support Center</a></li>
+                            <li><a href="javascript:void(0)">FAQ</a></li>
+                            <li><a href="javascript:void(0)">Terms & Conditions</a></li>
+                        </ul>
+                    </div>
+                    <!-- footer link -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- footer widget -->
+
+    <div class="footer-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright text-center">
+                        <p class="text">Copyright © 2023 PRIOR DESIGN.</p>
+                    </div>
+                    <!-- copyright -->
+                </div>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- container -->
+    </div>
+    <!-- footer copyright -->
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 10,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+</script>
+
+<script src="assets/js/glightbox.min.js"></script>
+<script>
+    //============== isotope masonry portfolio-two
+    const filters = document.querySelectorAll(".portfolio-menu button");
+
+    filters.forEach((filter) => {
+        filter.addEventListener("click", function () {
+            // ==== Filter btn toggle
+            let filterBtn = filters[0];
+            while (filterBtn) {
+                if (filterBtn.tagName === "BUTTON") {
+                    filterBtn.classList.remove("active");
+                }
+                filterBtn = filterBtn.nextSibling;
+            }
+            this.classList.add("active");
+
+            // === filter
+            let selectedFilter = filter.getAttribute("data-filter");
+            let itemsToHide = document.querySelectorAll(
+                `.grid .col-lg-4:not([data-filter='${selectedFilter}'])`
+            );
+            let itemsToShow = document.querySelectorAll(
+                `.grid [data-filter='${selectedFilter}']`
+            );
+
+            if (selectedFilter == "all") {
+                itemsToHide = [];
+                itemsToShow = document.querySelectorAll(".grid [data-filter]");
+            }
+
+            itemsToHide.forEach((el) => {
+                el.classList.add("hide");
+                el.classList.remove("show");
+            });
+
+            itemsToShow.forEach((el) => {
+                el.classList.remove("hide");
+                el.classList.add("show");
+            });
+        });
+    });
+
+    //========= glightbox
+    const myGallery2 = GLightbox({
+        selector: ".glightbox2",
+        type: "image",
+        width: 900,
+    });
+</script>
+</body>
+</html>
